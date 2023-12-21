@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.container h1 {
+    font-size: 20px;
+    margin: 0;
+}
+.container h2 {
+    font-size: 14px;
+    margin: 0;
+}
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.container:hover {
+cursor: pointer;
+transform: scale(1.2);
+}

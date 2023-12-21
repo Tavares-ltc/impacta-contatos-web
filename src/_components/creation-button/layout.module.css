@@ -1,0 +1,31 @@
+.creationButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    background-color: black;
+    box-sizing: border-box;
+    font-size: 70px;
+    color: hsl(44, 100%, 52%);
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    padding: 0;
+    margin-right: 60px;
+    margin-bottom: 60px;
+}
+
+.creationButton:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+    .creationButton {
+        margin-right: 0px;
+        box-sizing: content-box;
+        border: 10px solid white;
+
+    }
+}
