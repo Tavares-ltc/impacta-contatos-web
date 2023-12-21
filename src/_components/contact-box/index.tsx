@@ -1,16 +1,21 @@
 import { PropsWithChildren } from 'react'
 import style from '@/_components/contact-box/layout.module.css'
-interface PageTitle {
-    title: string,
-    description: string
+
+interface ContactData {
+    name: string,
+    tel: string,
+    description: string,
+    type: string,
+    image: string,
+    creationDate: Date
 }
-export function ContactBox(){
+export function ContactBox(props : ContactData){
 return (
     <div className={style.container}>
-        <img src='https://i.pinimg.com/736x/3e/aa/24/3eaa245d923949b6f662b8ba07b7a3b2.jpg'/>
+        <img src={props.image}/>
         <div className={style.text}>
-        <h1>Lucas</h1>
-        <h2>Advogado Penal</h2>
+        <h1>{props.name}</h1>
+        <h2>{props.type}</h2>
         </div>
     </div>
 )
