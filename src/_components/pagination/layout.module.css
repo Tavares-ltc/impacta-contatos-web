@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+}
+
+.container button {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button.selected {
+  color: hsl(44, 100%, 52%);
+  background-color: rgb(39, 39, 39);
+}
+
+.container button:first-of-type {
+  margin-right: 10px;
+}
+
+.container button:last-of-type {
+  margin-left: 10px;
+}
+
+
+@media screen and (max-width: 1084px) {
+  .container {
+    overflow-y: scroll;
+    padding-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    overflow-y: scroll;
+    padding-bottom: 100px;
+  }
+}

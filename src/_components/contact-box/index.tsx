@@ -1,4 +1,3 @@
-import { PropsWithChildren } from 'react'
 import style from '@/_components/contact-box/layout.module.css'
 
 interface ContactData {
@@ -11,7 +10,7 @@ interface ContactData {
 }
 export function ContactBox(props : ContactData){
 return (
-    <div className={style.container}>
+    <div className={style.container} key={props.tel}>
         <img src={props.image}/>
         <div className={style.text}>
         <h1>{props.name}</h1>
