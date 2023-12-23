@@ -2,25 +2,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 50px;
     width: 250px;
     box-sizing: border-box;
     text-align: center;
 }
 
-.container h1 {
+.text h1:first-child {
     font-size: 20px;
     margin: 0;
 }
-.container h2 {
+
+.text h2:first-child {
     font-size: 14px;
     margin: 0;
 }
-.text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+
 
 .container img {
     width: 50px;
@@ -30,6 +27,99 @@
 }
 
 .container:hover {
-cursor: pointer;
-transform: scale(1.2);
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.contactDetails section:first-of-child {
+    max-height: 20%;
+    margin-bottom: 20px;
+}
+
+.contactDetails section h1 {
+    margin-top: 35px;
+    padding: 0;
+}
+
+.contactDetails section h2 {
+    margin-bottom: 60px;
+}
+
+
+.contactDetails main section h2 {
+    margin-bottom: 10px;
+}
+
+.contactDetails section {
+    width: 40%;
+    height: 30%;
+}
+
+.contactDetails main {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+.contactDetails main section {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.contactDetails main section h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+.contactDetails main section h2 {
+    font-size: 20px;
+}
+
+.contactDetails main footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.contactDetails main footer button {
+    margin: 15px;
+    background-color: black;
+}
+
+.contactDetails main footer button:hover {
+    cursor: pointer;
+}
+
+.contactDetails main footer svg {
+    height: 30px;
+    width: 30px;
+    color: hsl(44, 72%, 52%);
+}
+
+.contactDetails img {
+    height: 360px;
+    height: 360px;
+    border: 5px solid black;
+    margin-bottom: 30px;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .contactDetails img {
+        width: 20vw;
+        height: 20vh;
+        border: 5px solid black;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .contactDetails main {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
 }

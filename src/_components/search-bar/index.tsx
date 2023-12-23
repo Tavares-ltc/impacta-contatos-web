@@ -1,6 +1,7 @@
 'use client'
 
 import style from '@/_components/search-bar/layout.module.css'
+import { FaArrowTurnDown } from "react-icons/fa6";
 import { useState } from 'react'
 
 export function SearchBar() {
@@ -34,8 +35,10 @@ export function SearchBar() {
                     ))}
                 </div>
             </div>
-
+            <section>
+            <FaArrowTurnDown/>
             <input type='text' name='search' placeholder='Procure pelo que quiser...' />
+            </section>
         </div>
     )
 }

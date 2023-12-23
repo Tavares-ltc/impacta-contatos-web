@@ -4,6 +4,19 @@
     align-items: center;
 }
 
+.container svg {
+    color: white;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 3%;
+}
+.container section {
+    color: red;
+    position: relative;
+    display: flex;
+}
+
 .container input {
     width: 80vw;
     max-width: 600px;

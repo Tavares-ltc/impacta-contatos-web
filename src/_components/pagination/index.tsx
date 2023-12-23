@@ -50,7 +50,9 @@ const createPaginationArray = (count: number, actualPage: number): string[] => {
         }
     }
 
-    pagesArray.push(totalPages.toString());
+    if(actualPage !== 1){
+        pagesArray.push(totalPages.toString());
+    }
 
     return pagesArray;
 };

@@ -9,12 +9,14 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <PageTitle>
-        <h1>Impacta Contatos</h1>
-        <h2>Ache seu contato jurídico aqui!</h2>
+        <header className={styles.homeTitle}>
+          <h1>Impacta Contatos</h1>
+          <h2>Ache seu contato jurídico aqui!</h2>
+        </header>
       </PageTitle>
-      <SearchBar/>
-      <ContactsTable/>
-      <CreationButton/>
+      <SearchBar />
+      <ContactsTable />
+      <CreationButton />
     </main>
   )
 }
