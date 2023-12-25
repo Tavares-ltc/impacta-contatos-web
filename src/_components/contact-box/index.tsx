@@ -10,7 +10,7 @@ import { useContactContext } from '@/context.tsx/ContactContext';
 export function ContactBox(props: IContactData) {
     const API_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
     const [isDetailsModalVisible, setIsDetailsModalVisible] = useState(false);
-    const { setSelectedContact } = useContactContext();
+    const { setSelectedContact, setGetRoute } = useContactContext();
 
     const selectContact = () => {
         setIsDetailsModalVisible(true);
@@ -23,7 +23,7 @@ export function ContactBox(props: IContactData) {
 
     const deleteContact = (id: string) => {
 
-        fetch(`${API_URL}/contacts?contactId=${id}`, {
+        fetch(`${API_URL}/contact?contactId=${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
@@ -33,6 +33,9 @@ export function ContactBox(props: IContactData) {
                 if (!response.ok) {
                     throw new Error('Erro ao deletar contato');
                 }
+
+                setIsDetailsModalVisible(false);
+                setGetRoute({route: 'list', queryParams: {}})
             })
             .catch(error => {
                 console.error('Erro:', error);
