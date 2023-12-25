@@ -1,16 +1,19 @@
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 70vw;
-    min-width: 500px;
-    height: 35vh;
-    max-height: 340px;
-    width: 80vw;
-    margin-top: 50px;
-    box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 4fr)); /* Usando auto-fit para ajustar automaticamente o número de colunas */
+  justify-content: start;
+  gap: 15px;
+  align-items: start;
+  max-width: 70vw;
+  min-width: 500px;
+  height: 35vh;
+  max-height: 340px;
+  width: 80vw;
+  margin-top: 50px;
+  box-sizing: border-box;
 }
 .container section {
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,6 +40,7 @@
 
   @media screen and (max-width: 700px) {
     .container {
+        /* grid-template-columns: repeat(300px, minmax(30px, 1fr));  */
         overflow-y: scroll;
         padding-bottom: 10px;
       }

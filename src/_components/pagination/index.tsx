@@ -1,12 +1,16 @@
 "useClient"
 
 import style from '@/_components/pagination/layout.module.css'
+import { useContactContext } from '@/context.tsx/ContactContext';
 
-export function Pagination({ count, actualPage, pageChange } : { count: number, actualPage: number, pageChange: (page: number) => void }) {
-    const paginationArr = createPaginationArray(count, 1)
+export function Pagination() {
+    const {actualPage, setActualPage, contacts} = useContactContext();
+    const paginationArr = createPaginationArray(contacts.count, actualPage)
+    
+    
 
     const handlePageClick = (page: number) => {
-        pageChange(page);
+        setActualPage(page);
     };
 
     const Buttons = paginationArr.map((page, index) => {
@@ -29,10 +33,9 @@ export function Pagination({ count, actualPage, pageChange } : { count: number, 
 }
 
 const createPaginationArray = (count: number, actualPage: number): string[] => {
-    const select = 20;
+    const select = 15;
     const totalPages = Math.ceil(count / select);
     const pagesArray: string[] = [];
-
     pagesArray.push('1');
 
     for (let i = 3; i > 0; i--) {
@@ -50,9 +53,10 @@ const createPaginationArray = (count: number, actualPage: number): string[] => {
         }
     }
 
-    if(actualPage !== 1){
+    if(actualPage !== totalPages){
         pagesArray.push(totalPages.toString());
     }
+    
 
     return pagesArray;
 };
