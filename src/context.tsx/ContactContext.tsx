@@ -71,7 +71,7 @@ import React, {
       }
   
       fetchData();
-    }, [actualPage, getRoute]);
+    }, [actualPage, getRoute, selectedContact]);
   
     const contextValues = {
       actualPage,
